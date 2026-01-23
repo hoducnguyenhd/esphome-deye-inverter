@@ -72,8 +72,9 @@ modbus_controller:
     modbus_id: modbus_1
     setup_priority: -10
     update_interval: ${update_interval}
-    command_throttle: 60ms
+    command_throttle: 150ms
     offline_skip_updates: 3
+
 
 
 
