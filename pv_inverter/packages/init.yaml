@@ -6,7 +6,7 @@ substitutions:
 esphome:
   name: "${name}"
   friendly_name: "${friendly_name}"
-  comment: "${device_description} by Nguyenho"
+  comment: "${device_description} coding by Nguyenho"
   project:
     name: "esphome.deye-inverter"
     version: "0.10.0"
@@ -15,8 +15,6 @@ logger:
   level: WARN
 
 api:
-  encryption:
-    key: ${api_key}
   on_client_disconnected:
     - delay: ${safe_mode_delay}
     - if:
@@ -28,19 +26,14 @@ api:
 
   on_client_connected:
     - logger.log: "Connection to HomeAssistant API restored"
-
 ota:
   - platform: esphome
-    password: ${ota_password}
-
 wifi:
   ssid: ${wifi_ssid}
   password: ${wifi_password}
 
   ap:
     ssid: "${friendly_name} Fallback Hotspot"
-    password: ${fallback_password}
-
 captive_portal:
 
 uart:
@@ -60,4 +53,5 @@ modbus_controller:
     update_interval: ${update_interval}
     command_throttle: 60ms
     offline_skip_updates: 3
+
 
