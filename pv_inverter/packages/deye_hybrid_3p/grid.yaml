@@ -143,19 +143,6 @@ sensor:
     icon: "mdi:transmission-tower-export"
 
 
-  - platform: modbus_controller
-    modbus_controller_id: ${modbus_controller_id}
-    name: "External CT L2 Power"
-    register_type: holding
-    address: 617
-    unit_of_measurement: "W"
-    device_class: power
-    state_class: "measurement"
-    accuracy_decimals: 0
-    value_type: S_WORD
-    icon: "mdi:transmission-tower"
-
-
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
@@ -359,6 +346,7 @@ number:
     register_type: holding
     address: 237
     internal: true
+
 
 
 
