@@ -1,26 +1,14 @@
-﻿# Copyright 2025 Lewa-Reka <lewareka.yt@gmail.com>
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+
 
 substitutions:
-  update_interval: 5s
+  update_interval: 6s
 
 esphome:
   name: "${name}"
   friendly_name: "${friendly_name}"
-  comment: "${device_description} by Lewa-Reka https://github.com/Lewa-Reka/esphome-deye-inverter"
+  comment: "${device_description} by Nguyenho"
   project:
-    name: "lewa-reka.deye-inverter"
+    name: "esphome.deye-inverter"
     version: "0.10.0"
 
 logger:
@@ -72,3 +60,4 @@ modbus_controller:
     update_interval: ${update_interval}
     command_throttle: 60ms
     offline_skip_updates: 3
+
