@@ -334,25 +334,6 @@ sensor:
     disabled_by_default: true
     icon: "mdi:thermometer-lines"
 
-binary_sensor:
-  - platform: modbus_controller
-    modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Alarm"
-    register_type: holding
-    address: 220
-    device_class: problem
-    entity_category: diagnostic
-    icon: "mdi:battery-alert"
-
-  - platform: modbus_controller
-    modbus_controller_id: ${modbus_controller_id}
-    name: "Battery Fault"
-    register_type: holding
-    address: 221
-    device_class: problem
-    entity_category: diagnostic
-    icon: "mdi:battery-alert-variant"
-
 select:
   - platform: modbus_controller
     use_write_multiple: true
@@ -792,3 +773,4 @@ number:
     device_class: current
     value_type: U_WORD
     icon: "mdi:battery-charging-50"
+
