@@ -9,7 +9,7 @@ esphome:
   comment: "${device_description} coding by Nguyenho"
   project:
     name: "esphome.deye-inverter"
-    version: "0.10.0"
+    version: v1.1.0 (Coding by Nguyenho)
 logger:
   level: WARN
 
@@ -74,6 +74,7 @@ modbus_controller:
     update_interval: ${update_interval}
     command_throttle: 60ms
     offline_skip_updates: 3
+
 
 
 
