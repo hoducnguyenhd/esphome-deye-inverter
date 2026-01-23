@@ -1,7 +1,7 @@
 
 
 substitutions:
-  update_interval: 6s
+  update_interval: 10s
 
 esphome:
   name: "${name}"
@@ -53,5 +53,6 @@ modbus_controller:
     update_interval: ${update_interval}
     command_throttle: 60ms
     offline_skip_updates: 3
+
 
 
