@@ -18,7 +18,7 @@ packages:
   grid: !include packages/deye_hybrid_3p/grid.yaml
   load: !include packages/deye_hybrid_3p/load.yaml
   work_mode: !include packages/deye_hybrid_3p/work_mode.yaml
-  device: !include packages/deye_hybrid_3p/device.yaml
+  #device: !include packages/deye_hybrid_3p/device.yaml
   inverter: !include packages/deye_hybrid_3p/inverter.yaml
   pv: !include packages/deye_hybrid_3p/pv.yaml
   #tou: !include packages/deye_hybrid_3p/tou.yaml
@@ -43,5 +43,6 @@ script:
           id: switch_solar_sell
       - switch.turn_${default_force_off_grid}:
           id: switch_off_grid
+
 
 
