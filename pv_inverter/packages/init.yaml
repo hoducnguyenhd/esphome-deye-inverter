@@ -10,7 +10,7 @@ esphome:
   project:
     name: "esphome.deye-inverter"
     version: "0.10.0"
-
+  minimum_chip_revision: 3.1
 logger:
   level: WARN
 
@@ -75,6 +75,7 @@ modbus_controller:
     update_interval: ${update_interval}
     command_throttle: 60ms
     offline_skip_updates: 3
+
 
 
 
