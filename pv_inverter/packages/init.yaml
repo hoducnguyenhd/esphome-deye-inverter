@@ -35,7 +35,29 @@ wifi:
   ap:
     ssid: "${friendly_name} Fallback Hotspot"
 captive_portal:
+button:
+  - platform: restart
+    icon: mdi:restart
+    name: "Restart"
+    entity_category: "diagnostic"  
+    id: rst              
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: "IP"
+      icon: mdi:ip-network-outline 
+    ssid:
+      name: SSID     
+sensor:
+  - platform: wifi_signal 
+    name: "RSSI"
+    id: wifi_signal_db
+    entity_category: "diagnostic"         
 
+binary_sensor:
+  - platform: status
+    name: "Status"
+    entity_category: "diagnostic"
 uart:
   id: modbus_uart
   baud_rate: ${baud_rate}
@@ -53,6 +75,7 @@ modbus_controller:
     update_interval: ${update_interval}
     command_throttle: 60ms
     offline_skip_updates: 3
+
 
 
 
