@@ -327,44 +327,6 @@ sensor:
     value_type: S_WORD
     icon: "mdi:transmission-tower"
 
-binary_sensor:
-
-  - platform: modbus_controller
-    modbus_controller_id: ${modbus_controller_id}
-    name: "CT L1 Self Test"
-    register_type: holding
-    address: 597
-    bitmask: 0x01
-    device_class: problem
-    filters:
-      - invert:
-    entity_category: diagnostic
-    icon: "mdi:check-circle"
-
-  - platform: modbus_controller
-    modbus_controller_id: ${modbus_controller_id}
-    name: "CT L2 Self Test"
-    register_type: holding
-    address: 597
-    bitmask: 0x02
-    device_class: problem
-    filters:
-      - invert:
-    entity_category: diagnostic
-    icon: "mdi:check-circle"
-
-  - platform: modbus_controller
-    modbus_controller_id: ${modbus_controller_id}
-    name: "CT L3 Self Test"
-    register_type: holding
-    address: 597
-    bitmask: 0x04
-    device_class: problem
-    filters:
-      - invert:
-    entity_category: diagnostic
-    icon: "mdi:check-circle"
-
 select:
   - platform: modbus_controller
     use_write_multiple: true
@@ -472,5 +434,6 @@ number:
     register_type: holding
     address: 237
     internal: true
+
 
 
