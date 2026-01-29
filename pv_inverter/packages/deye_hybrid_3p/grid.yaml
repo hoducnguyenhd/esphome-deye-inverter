@@ -370,14 +370,6 @@ sensor:
     icon: "mdi:transmission-tower"
 
 binary_sensor:
-  - platform: modbus_controller
-    modbus_controller_id: ${modbus_controller_id}
-    name: "AC Grid Relay"
-    register_type: holding
-    address: 552
-    bitmask: 0x4
-    device_class: power
-    icon: "mdi:transmission-tower"
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
@@ -522,3 +514,4 @@ number:
     register_type: holding
     address: 237
     internal: true
+
