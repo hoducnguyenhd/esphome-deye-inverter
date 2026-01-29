@@ -327,48 +327,6 @@ sensor:
     value_type: S_WORD
     icon: "mdi:transmission-tower"
 
-  - platform: modbus_controller
-    modbus_controller_id: ${modbus_controller_id}
-    name: "External CT L1 Current"
-    id: external_ct_l1_current
-    register_type: holding
-    address: 613
-    unit_of_measurement: "A"
-    device_class: current
-    accuracy_decimals: 2
-    filters:
-      - multiply: 0.01
-    value_type: S_WORD
-    icon: "mdi:transmission-tower"
-
-  - platform: modbus_controller
-    modbus_controller_id: ${modbus_controller_id}
-    name: "External CT L2 Current"
-    id: external_ct_l2_current
-    register_type: holding
-    address: 614
-    unit_of_measurement: "A"
-    device_class: current
-    accuracy_decimals: 2
-    filters:
-      - multiply: 0.01
-    value_type: S_WORD
-    icon: "mdi:transmission-tower"
-
-  - platform: modbus_controller
-    modbus_controller_id: ${modbus_controller_id}
-    name: "External CT L3 Current"
-    id: external_ct_l3_current
-    register_type: holding
-    address: 615
-    unit_of_measurement: "A"
-    device_class: current
-    accuracy_decimals: 2
-    filters:
-      - multiply: 0.01
-    value_type: S_WORD
-    icon: "mdi:transmission-tower"
-
 binary_sensor:
 
   - platform: modbus_controller
@@ -514,4 +472,5 @@ number:
     register_type: holding
     address: 237
     internal: true
+
 
