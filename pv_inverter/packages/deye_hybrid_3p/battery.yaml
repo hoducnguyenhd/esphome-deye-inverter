@@ -335,18 +335,6 @@ switch:
     entity_category: config
     icon: "mdi:battery-charging"
 
-  - platform: modbus_controller
-    use_write_multiple: true
-    modbus_controller_id: ${modbus_controller_id}
-    name: "Battery 2 Wake Up"
-    register_type: holding
-    address: 112
-    bitmask: 256 # Bit8: Battery 2 wake up (0=enabled, 1=disabled)
-    entity_category: config
-    disabled_by_default: true
-    icon: "mdi:battery-charging"
-
-
 
   - platform: modbus_controller
     use_write_multiple: true
@@ -656,4 +644,5 @@ number:
     device_class: current
     value_type: U_WORD
     icon: "mdi:battery-charging-50"
+
 
