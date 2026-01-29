@@ -143,8 +143,6 @@ sensor:
       return (
         id(pv1_power).state +
         id(pv2_power).state +
-        (id(pv3_power).state) +
-        (id(pv4_power).state) +
         id(battery_power).state -
         id(generator_power_total).state -
         id(output_power).state
@@ -188,6 +186,7 @@ sensor:
         id(total_consumption).state
       );
     icon: "mdi:home-lightning-bolt"
+
 
 
 
